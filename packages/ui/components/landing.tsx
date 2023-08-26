@@ -17,15 +17,17 @@ export function Landing(){
                 </div>
                 <div style={{display: 'flex',  marginTop:20}}>
                     <div style={{marginRight: 10}}>
-                        <Button 
-                        variant="contained"
-                        > SingIn </Button>
+                    <Link href="/signin" passHref>
+                            <div style={{ display: 'inline-block' }}>
+                                <Button variant="contained">SignIn</Button>
+                            </div>
+                        </Link>
                     </div>
                 
                     <div>
                         <Link href="/signup" passHref>
                             <div style={{ display: 'inline-block' }}>
-                                <Button variant="contained">SignIn</Button>
+                                <Button variant="contained">SignUp</Button>
                             </div>
                         </Link>
                     </div>

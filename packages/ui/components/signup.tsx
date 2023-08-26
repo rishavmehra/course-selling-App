@@ -1,13 +1,16 @@
 import { Button, Card, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-
+import { userState } from "../../store/src/atoms/user"
+import { useSetRecoilState } from "recoil";
 
 
 export function Signup(props: {
     onClick: (username: string, password: string) => void
 }){
-    const [ username, setUsername ] = useState("")
-    const [ password, setPassword ] = useState("")
+
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const setUser = useSetRecoilState(userState)
 
     return <div>
 
@@ -39,8 +42,11 @@ export function Signup(props: {
                     variant="contained"
                     onClick={()=>{
                         props.onClick(username, password)
+                        setUser({
+                            userEmail: username,
+                            isLoading: false
+                        })
                     }}
-                    setUser
                     >
                     Submit
                     </Button>

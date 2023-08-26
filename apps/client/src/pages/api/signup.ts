@@ -25,5 +25,4 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         const token = jwt.sign({username, role: 'admin'}, SECRET, {expiresIn: '4h'} )
         res.status(201).json({message: "admin create successfully", token})
     }
-
 };

@@ -1,9 +1,9 @@
-import { atom } from "recoil";
+import {atom} from "recoil";
 
-export const courseState = atom({
-    key: 'courseState',
-    default: {
-        isLoading: false,
-        course: null
-    },
-})
+export const courseState = atom<{isLoading: boolean, course: any}>({
+  key: 'courseState',
+  default: {
+    isLoading: true,
+    course: null
+  },
+});
