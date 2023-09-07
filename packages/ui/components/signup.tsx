@@ -1,6 +1,6 @@
 import { Button, Card, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import { userState } from "../../store/src/atoms/user"
+import { userState } from "../../store/atoms/user"
 import { useSetRecoilState } from "recoil";
 
 
